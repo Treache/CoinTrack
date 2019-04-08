@@ -19,7 +19,7 @@ def get_data(): # GET DATA
             'limit': '5000',
             'convert': 'USD',
         }
-        url = 'http://api.coinlayer.com/' + get_date_for_endpoint(today - timedelta(days=i * 5)) + '?access_key=227da4735f809c417f000fbb048ddcef&symbols=DASH,ETH,LTC'
+        url = 'http://api.coinlayer.com/' + get_date_for_endpoint(today - timedelta(days=i * 5)) + '?access_key=21c99f662bcdab2b956af16801739613&symbols=DASH,ETH,LTC'
         response = session.get(url, params=parameters)
         thej = json.loads(response.text)
         appendie = { #SEPERATE INFORMATION AND PREPARE TO APPEND TO THE LIST
@@ -42,17 +42,20 @@ def get_data(): # GET DATA
     finaldata.append({
         'x' : x,
         'y' : by,
-        'type':'bar'
+        'type':'bar',
+        'name' : 'Dash'
     })
     finaldata.append({
         'x' : x,
         'y' : ey,
-        'type':'bar'
+        'type':'bar',
+        'name' : 'Ethereum'
     })
     finaldata.append({
         'x' : x,
         'y' : ly,
-        'type':'bar'
+        'type':'bar',
+        'name' : 'Litecoin'
     })
     return json.dumps(finaldata)
     
