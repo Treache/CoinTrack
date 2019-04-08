@@ -15,3 +15,5 @@ Use the following command to install the dependency:
 ```pip install requests```
 
 ### LIMITED API REQUESTS (500 requests - 15 requests per reload - a total of 33 reloads)
+
+![CoinTrack](http://zekki.ca/wp-content/uploads/2019/04/CoinTrack.png)
